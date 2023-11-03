@@ -1,0 +1,52 @@
+name: sample_upwork
+description: A Very Good Project created by Very Good CLI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  auto_route: ^6.4.0
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.9.0 
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.0
+  flutter_svg: ^2.0.5
+
+dev_dependencies:
+  auto_route_generator: ^6.2.0
+  build_runner: ^2.4.0
+  bloc_test: ^9.1.2
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+  very_good_analysis: ^5.0.0
+
+flutter:
+  fonts:
+    - family: Poppins     
+      fonts:
+        - asset: assets/fonts/Poppins-Medium.ttf
+  assets:
+    - assets/jpg/mock_image.jpeg
+    - assets/svg/leftovers.svg
+    - assets/svg/settings.svg
+    - assets/svg/home.svg
+    - assets/svg/chat.svg
+    - assets/svg/clock.svg
+    - assets/svg/search.svg
+    - assets/svg/filter.svg
+    - assets/svg/shopping_list.svg
+    - assets/svg/arrow-left.svg
+    - assets/svg/fire.svg
+    - assets/svg/share.svg
+    - assets/svg/minus.svg
+    - assets/svg/plus.svg
+    - assets/png/mock.png
+    - assets/jpg/mock_3.jpeg
+    - assets/png/mock_4.png
+  uses-material-design: true
+  generate: true
