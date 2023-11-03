@@ -10,6 +10,7 @@ class Dish {
     required this.imagePath,
     required this.ingredients,
   });
+
   final int id;
   final String title;
   final Duration cookTime;
@@ -17,5 +18,4 @@ class Dish {
   final String imagePath;
   final List<Ingredient> ingredients;
   final List<String> categories;
-  final Map<String, bool> ingredientAvailability = {};
 }

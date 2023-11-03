@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    HomeNestedWrapperRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const HomeNestedWrapperPage(),
+      );
+    },
     HomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -55,13 +61,21 @@ abstract class _$AppRouter extends RootStackRouter {
         ),
       );
     },
-    HomeNestedWrapperRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const HomeNestedWrapperPage(),
-      );
-    },
   };
+}
+
+/// generated route for
+/// [HomeNestedWrapperPage]
+class HomeNestedWrapperRoute extends PageRouteInfo<void> {
+  const HomeNestedWrapperRoute({List<PageRouteInfo>? children})
+      : super(
+          HomeNestedWrapperRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'HomeNestedWrapperRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -170,18 +184,4 @@ class DishDetailsRouteArgs {
   String toString() {
     return 'DishDetailsRouteArgs{dish: $dish, key: $key}';
   }
-}
-
-/// generated route for
-/// [HomeNestedWrapperPage]
-class HomeNestedWrapperRoute extends PageRouteInfo<void> {
-  const HomeNestedWrapperRoute({List<PageRouteInfo>? children})
-      : super(
-          HomeNestedWrapperRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'HomeNestedWrapperRoute';
-
-  static const PageInfo<void> page = PageInfo<void>(name);
 }

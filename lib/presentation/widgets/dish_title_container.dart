@@ -20,7 +20,7 @@ class DishTitleContainer extends StatelessWidget {
         color: Colors.white,
       ),
       padding: EdgeInsets.all(12.w),
-      width: MediaQuery.of(context).size.width,
+      width: double.infinity,
       child: Text(
         dish.title,
         style: TextStyles.commonPoppins.copyWith(

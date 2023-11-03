@@ -9,11 +9,13 @@ class IngredientCard extends StatelessWidget {
     required this.index,
     required this.toggleCheckboxCallback,
     required this.dish,
+    required this.selectedIngredients,
     super.key,
   });
   final Dish dish;
   final int index;
-  final void Function(bool?) toggleCheckboxCallback;
+  final void Function({bool? value}) toggleCheckboxCallback;
+  final List<String> selectedIngredients;
 
   @override
   Widget build(BuildContext context) {
@@ -33,12 +35,18 @@ class IngredientCard extends StatelessWidget {
           ),
         ),
         Checkbox(
-          value: dish.ingredientAvailability
-              .containsKey(dish.ingredients[index].title),
-          onChanged: toggleCheckboxCallback,
-          fillColor: const MaterialStatePropertyAll(
-            Palette.textColor,
+          side: MaterialStateBorderSide.resolveWith(
+            (states) => BorderSide(
+              color: Palette.textColor,
+              width: 1.5.w,
+            ),
           ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(2.r),
+          ),
+          fillColor: const MaterialStatePropertyAll(Palette.textColor),
+          value: selectedIngredients.contains(dish.ingredients[index].title),
+          onChanged: (value) => toggleCheckboxCallback(value: value),
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -50,8 +58,7 @@ class IngredientCard extends StatelessWidget {
             ),
             Text(
               'For ${dish.ingredients[index].destination}',
-              style: TextStyles.commonPoppins
-                  .copyWith(fontSize: 12.sp, color: Palette.hintColor),
+              style: TextStyles.hintPoppins,
             )
           ],
         )

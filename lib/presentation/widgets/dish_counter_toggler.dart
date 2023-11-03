@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sample_upwork/gen/assets.gen.dart';
 import 'package:sample_upwork/presentation/theme/palette.dart';
 import 'package:sample_upwork/presentation/theme/text_styles.dart';
 
@@ -30,7 +31,10 @@ class DishCounterToggler extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: decreaseCallback,
-            child: SvgPicture.asset('assets/svg/minus.svg'),
+            child: ColoredBox(
+              color: Colors.transparent,
+              child: SvgPicture.asset(Assets.svg.minus),
+            ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -42,7 +46,10 @@ class DishCounterToggler extends StatelessWidget {
           ),
           GestureDetector(
             onDoubleTap: increaseCallback,
-            child: SvgPicture.asset('assets/svg/plus.svg'),
+            child: ColoredBox(
+              color: Colors.transparent,
+              child: SvgPicture.asset(Assets.svg.plus),
+            ),
           ),
         ],
       ),

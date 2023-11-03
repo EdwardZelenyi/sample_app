@@ -24,7 +24,7 @@ class BottomNavigationBarIcon extends StatelessWidget {
         imagePath,
         colorFilter: isActive
             ? const ColorFilter.mode(Colors.blue, BlendMode.srcIn)
-            : null,
+            : const ColorFilter.mode(Palette.hintColor, BlendMode.srcIn),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:sample_upwork/domain/entity/dish.dart';
 import 'package:sample_upwork/domain/entity/ingredient.dart';
+import 'package:sample_upwork/gen/assets.gen.dart';
 
 class DishGateway {
   List<Dish> getDishes() {
@@ -14,7 +15,7 @@ final List<Dish> dishes = [
     cookTime: const Duration(minutes: 46),
     calories: 260,
     categories: ['Daily', 'Salad', 'Breakfast', 'Light food'],
-    imagePath: 'assets/jpg/mock_image.jpeg',
+    imagePath: Assets.jpg.mock2.path,
     ingredients: [
       Ingredient(
         id: 1,
@@ -34,7 +35,7 @@ final List<Dish> dishes = [
     ],
   ),
   Dish(
-    imagePath: 'assets/jpg/mock_3.jpeg',
+    imagePath: Assets.jpg.mock3.path,
     id: 2,
     title: 'BBQ Pork Puff',
     cookTime: const Duration(minutes: 46),
@@ -59,7 +60,7 @@ final List<Dish> dishes = [
     ],
   ),
   Dish(
-    imagePath: 'assets/png/mock_4.png',
+    imagePath: Assets.png.mock4.path,
     id: 3,
     title: 'Lotus Leaf Glutinous Rice Lotus Leaf Glutinous Rice ',
     cookTime: const Duration(minutes: 46),
@@ -84,7 +85,7 @@ final List<Dish> dishes = [
     ],
   ),
   Dish(
-    imagePath: 'assets/jpg/mock_3.jpeg',
+    imagePath: Assets.jpg.mock3.path,
     id: 4,
     title: 'Lotus Leaf Glutinous Rice Lotus Leaf Glutinous Rice ',
     cookTime: const Duration(minutes: 46),

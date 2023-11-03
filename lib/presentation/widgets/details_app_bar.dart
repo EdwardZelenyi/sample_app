@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sample_upwork/presentation/theme/palette.dart';
+import 'package:sample_upwork/gen/assets.gen.dart';
 import 'package:sample_upwork/presentation/theme/text_styles.dart';
 
 class DetailsPageAppBar extends StatelessWidget {
-  const DetailsPageAppBar({super.key, required this.navigationCallback});
+  const DetailsPageAppBar({required this.navigationCallback, super.key});
   final VoidCallback navigationCallback;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Palette.scaffoldBackgroundColor,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       automaticallyImplyLeading: false,
       elevation: 0,
       title: Row(
@@ -19,15 +19,11 @@ class DetailsPageAppBar extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: navigationCallback,
-            child: SvgPicture.asset('assets/svg/arrow-left.svg'),
+            child: SvgPicture.asset(Assets.svg.arrowLeft),
           ),
           Text(
             'Recipe details',
-            style: TextStyles.commonPoppins.copyWith(
-              color: Palette.textColor,
-              fontWeight: FontWeight.w500,
-              fontSize: 22.sp,
-            ),
+            style: TextStyles.largeTitlePoppins,
           ),
           SizedBox(
             width: 24.h,

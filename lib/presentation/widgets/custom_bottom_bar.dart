@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sample_upwork/gen/assets.gen.dart';
 import 'package:sample_upwork/presentation/theme/palette.dart';
 import 'package:sample_upwork/presentation/theme/text_styles.dart';
 
@@ -34,36 +35,36 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       selectedFontSize: 12.sp,
       unselectedFontSize: 12.sp,
       iconSize: 22.h,
-      items: const [
+      items: [
         BottomNavigationBarItem(
           icon: BottomNavigationBarIcon(
             isActive: false,
-            imagePath: 'assets/svg/home.svg',
+            imagePath: Assets.svg.home,
           ),
           activeIcon: BottomNavigationBarIcon(
             isActive: true,
-            imagePath: 'assets/svg/home.svg',
+            imagePath: Assets.svg.home,
           ),
           label: 'Favorites',
         ),
         BottomNavigationBarItem(
           icon: BottomNavigationBarIcon(
             isActive: false,
-            imagePath: 'assets/svg/shopping_list.svg',
+            imagePath: Assets.svg.shoppingList,
           ),
           activeIcon: BottomNavigationBarIcon(
             isActive: true,
-            imagePath: 'assets/svg/shopping_list.svg',
+            imagePath: Assets.svg.shoppingList,
           ),
           label: 'Shopping list',
         ),
         BottomNavigationBarItem(
           icon: BottomNavigationBarIcon(
-            imagePath: 'assets/svg/leftovers.svg',
+            imagePath: Assets.svg.leftovers,
             isActive: false,
           ),
           activeIcon: BottomNavigationBarIcon(
-            imagePath: 'assets/svg/leftovers.svg',
+            imagePath: Assets.svg.leftovers,
             isActive: true,
           ),
           label: 'Leftovers',
@@ -71,11 +72,11 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
         BottomNavigationBarItem(
           icon: BottomNavigationBarIcon(
             isActive: false,
-            imagePath: 'assets/svg/settings.svg',
+            imagePath: Assets.svg.settings,
           ),
           activeIcon: BottomNavigationBarIcon(
             isActive: true,
-            imagePath: 'assets/svg/settings.svg',
+            imagePath: Assets.svg.settings,
           ),
           label: 'Settings',
         ),

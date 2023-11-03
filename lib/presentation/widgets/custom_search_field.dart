@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:sample_upwork/gen/assets.gen.dart';
 import 'package:sample_upwork/presentation/theme/palette.dart';
 import 'package:sample_upwork/presentation/theme/text_styles.dart';
 
@@ -16,7 +17,7 @@ class CustomSearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: double.infinity,
       height: 49.h,
       decoration: BoxDecoration(
         border: Border.all(
@@ -50,7 +51,7 @@ class CustomSearchField extends StatelessWidget {
                   width: 38.w,
                   height: 31.h,
                   child: SvgPicture.asset(
-                    'assets/svg/filter.svg',
+                    Assets.svg.filter,
                     height: 16.h,
                     width: 16.w,
                     fit: BoxFit.scaleDown,
@@ -66,7 +67,7 @@ class CustomSearchField extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 20.w, right: 10.w),
                 child: SvgPicture.asset(
-                  'assets/svg/search.svg',
+                  Assets.svg.search,
                   height: 21.h,
                   width: 21.w,
                 ),
@@ -75,8 +76,7 @@ class CustomSearchField extends StatelessWidget {
           ),
           border: InputBorder.none,
           hintText: 'Search recipe',
-          hintStyle: TextStyles.commonPoppins
-              .copyWith(fontSize: 14.sp, color: Palette.hintColor),
+          hintStyle: TextStyles.hintPoppins.copyWith(fontSize: 14.sp),
         ),
       ),
     );
